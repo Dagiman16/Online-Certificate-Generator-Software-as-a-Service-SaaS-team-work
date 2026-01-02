@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply text-secondary-800 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold py-3 px-6 rounded-xl shadow-soft hover:shadow-medium transition-all duration-200 transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-secondary-50 text-secondary-700 font-medium py-3 px-6 rounded-xl border border-secondary-200 hover:border-secondary-300 shadow-soft hover:shadow-medium transition-all duration-200 transform hover:-translate-y-0.5;
+  }
+  
+  .btn-success {
+    @apply bg-gradient-to-r from-success-600 to-success-700 hover:from-success-700 hover:to-success-800 text-white font-semibold py-3 px-6 rounded-xl shadow-soft hover:shadow-medium transition-all duration-200 transform hover:-translate-y-0.5;
+  }
+  
+  .btn-ghost {
+    @apply text-secondary-600 hover:text-secondary-800 font-medium py-2 px-4 rounded-lg hover:bg-secondary-50 transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-soft border border-secondary-100 p-6 hover:shadow-medium transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply bg-white rounded-2xl shadow-soft border border-secondary-100 p-6 hover:shadow-large hover:-translate-y-1 transition-all duration-300 cursor-pointer;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-secondary-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white placeholder-secondary-400 transition-all duration-200;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary-50 via-white to-accent-50;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
